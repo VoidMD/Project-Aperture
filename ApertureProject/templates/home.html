@@ -1,0 +1,71 @@
+{% extends 'main.html' %}
+
+{% load static %}
+
+{% block content %}
+
+<div class="airplaneAnimation">
+    <div class="plane">
+    <div class="main"></div>
+    <div class="wingOne"></div>
+    <div class="wingTwo"></div>
+    <div class="pollution"></div>
+    </div>
+    <div class="clouds">
+      <div class="cloudOne"></div>
+      <div class="cloudTwo"></div>
+      <div class="cloudThree"></div>
+    </div>
+  </div>
+
+
+<h1 class="display-1 text-center text-light"> Welcome to Aperture Airlines</h1>
+<h6 class="display-6 text-center text-light"> With us you can fly to the moon and beyond</h6>
+<br>
+
+<div class="container" style="margin: auto;">
+
+  <div class="row">
+    <div class="col">
+      
+      <div class="card" style="">
+        <img src="{% static 'images/search.svg'%}" class="card-img-top w-25" alt="..." style="margin: auto; padding: 1rem; width: 5rem;">
+        <div class="card-body">
+          <h5 class="card-title text-center">Search for flight</h5>
+          <a href="#" class="stretched-link">
+          </a>
+        </div>
+        </div>
+
+
+    </div>
+
+    <div class="col">
+
+      <div class="card" style="">
+        <img src="{% static 'images/edit.svg'%}" class="card-img-top w-25" alt="..." style="margin: auto; padding: 1rem; width: 5rem;">
+        <div class="card-body">
+          <h5 class="card-title text-center">Manage My Booking</h5>
+          <a href="#" class="stretched-link">
+          </a>
+        </div>
+        </div>
+
+    </div>
+
+    <div class="col">
+
+      <div class="card" style="">
+        <img src="{% static 'images/assept-document.svg'%}" class="card-img-top w-25" alt="..." style="margin: auto; padding: 1rem; width: 5rem;">
+        <div class="card-body">
+          <h5 class="card-title text-center">Check-in</h5>
+          <a href="#" class="stretched-link">
+          </a>
+        </div>
+        </div>
+
+    </div>
+
+  </div>
+</div>
+{% endblock content %}
