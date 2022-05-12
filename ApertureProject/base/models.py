@@ -31,6 +31,9 @@ class Airplane(models.Model):
     )
     on_maintenance = models.CharField(max_length=1, choices = ON_MAINTENANCE, default='F')
 
+    def __str__(self):
+        return self.Airplane_name
+
 class Flight(models.Model):
     Date = models.DateTimeField()
     Source_City = CountryField()
@@ -39,6 +42,9 @@ class Flight(models.Model):
     Flight_Duration = models.DurationField()
     Boarding_Time = models.CharField(max_length=30)
 
+    def __str__(self):
+        return str(self.pk)
+
 class Ticket(models.Model):
     Seat_location = models.CharField(max_length=100)
     Cabin = models.CharField(max_length=100)
@@ -46,16 +52,30 @@ class Ticket(models.Model):
     Date_of_Issue = models.DateField(default=datetime.today)
     Flight_Number = models.ForeignKey(Flight, on_delete=models.CASCADE)
 
+    def __str__(self):
+        return str(self.pk)
+
+
 class Booked(models.Model):
     User = models.ForeignKey(User, on_delete=models.CASCADE)
     Ticket_number = models.ForeignKey(Ticket , on_delete=models.CASCADE)
+
+    def __str__(self):
+        return 'user : {user}   Flight : {f}'.format(user = self.User , f = self.Ticket_number)
 
 class Waitlist(models.Model):
     User = models.ForeignKey(User, on_delete=models.CASCADE)
     Flight_Number = models.ForeignKey(Flight, on_delete=models.CASCADE)
 
+    def __str__(self):
+        return str(self.User)
+
 class Bags(models.Model):
     User = models.ForeignKey(User, on_delete=models.CASCADE)
-    Weight = models.CharField(default="23 KG")
-    Dimensions = models.CharField()
+    Weight = models.CharField(max_length=20,default="23 KG")
+    Dimensions = models.CharField(max_length=20)
+
+    def __str__(self):
+        return str(self.User)
+
 
