@@ -13,7 +13,13 @@
             <a class="nav-link active" aria-current="page" href="/">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
+            <a class="nav-link" href="{% url 'flight_search'%}">Flight Search</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'manage_booking'%}">Manage My Booking</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'check_in'%}">Check-in</a>
           </li>
           {% if request.user.is_authenticated %}
           <li class="nav-item dropdown">
@@ -32,15 +38,6 @@
           </li>
           {% endif %}
 
-          <!-- <li class="nav-item">
-            {% if request.user.is_authenticated %}
-            <a class="nav-link" href="{% url 'logout' %}">{{user.username}}(Logout)</a>
-            {% else %}
-
-            <a class="nav-link" href="{% url 'login' %}">Login</a>
-            {% endif %}
-
-          </li> -->
         </ul>
       
           <div class="">

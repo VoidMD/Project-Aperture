@@ -256,3 +256,53 @@ body{
       text-decoration: none;
       color: #000;
     }
+
+    .check-in{
+      max-width: 100%;
+      width: 80rem;
+      margin: auto;
+      background-color: whitesmoke;
+      padding: 1rem;
+
+      margin-top: 5%;
+
+      border-radius : 8px; 
+      backdrop-filter : blur(20px); 
+      background-color : rgba(255, 255, 255, 0.732); 
+      box-shadow : 0 1px 12px rgba(0, 0, 0, 0.25); 
+      border : 1px solid rgba(255, 255, 255, 0.3);
+
+    }
+
+    .check-in-list{
+      max-width: 100%;
+      width: 80rem;
+      margin: auto;
+      background-color: whitesmoke;
+      padding: 1rem;
+
+      margin-top: 5%;
+
+      border-radius : 8px; 
+      backdrop-filter : blur(20px); 
+      background-color : rgba(255, 255, 255, 0.732); 
+      box-shadow : 0 1px 12px rgba(0, 0, 0, 0.25); 
+      border : 1px solid rgba(255, 255, 255, 0.3);
+
+    }
+
+    .Search-form{
+      max-width: 100%;
+      width: 50rem;
+      margin: auto;
+      background-color: whitesmoke;
+      padding: 1rem;
+
+      margin-top: 5%;
+
+      border-radius : 8px; 
+      backdrop-filter : blur(20px); 
+      background-color : rgba(255, 255, 255, 0.5); 
+      box-shadow : 0 1px 12px rgba(0, 0, 0, 0.25); 
+      border : 1px solid rgba(255, 255, 255, 0.3);
+    }

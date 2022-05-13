@@ -6,7 +6,7 @@ from django.contrib.auth.models import User
 from django.contrib.auth.forms import UserCreationForm, PasswordChangeForm
 from django.contrib.auth import authenticate, login, logout
 
-from .forms import SignUpForm,SignUpPerson
+from .forms import SignUpForm
 
 def home(request):
     return render(request, 'home.html')
@@ -41,11 +41,9 @@ def logoutUser(request):
 
 def registerPage(request):
     form = SignUpForm()
-    person = SignUpPerson()
 
     if request.method == 'POST':
         form = SignUpForm(request.POST)
-        person = SignUpPerson(request.POST)
         if form.is_valid():
             user = form.save(commit=False)
             user.username = user.username.lower()
@@ -57,7 +55,7 @@ def registerPage(request):
         else:
             messages.error(request, 'Something went wrong !')
 
-    return render(request,'login.html', {'form':form,'person':person})
+    return render(request,'login.html', {'form':form})
 
 def userProfile(request):
     if request.user.is_authenticated:
@@ -76,3 +74,12 @@ def userProfile(request):
         return render(request, 'profile.html', context)
     else:
         return redirect('login')
+
+def flight_search(request):
+    return render(request,'Flight_Search.html')
+
+def manage_booking(request):
+    return render(request,'manage_flights.html')
+
+def check_in(request):
+    return render(request,'check_in.html')

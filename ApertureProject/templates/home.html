@@ -32,7 +32,7 @@
         <img src="{% static 'images/search.svg'%}" class="card-img-top w-25" alt="..." style="margin: auto; padding: 1rem; width: 5rem;">
         <div class="card-body">
           <h5 class="card-title text-center">Search for flight</h5>
-          <a href="#" class="stretched-link">
+          <a href="{%url 'flight_search'%}" class="stretched-link">
           </a>
         </div>
         </div>
@@ -46,7 +46,7 @@
         <img src="{% static 'images/edit.svg'%}" class="card-img-top w-25" alt="..." style="margin: auto; padding: 1rem; width: 5rem;">
         <div class="card-body">
           <h5 class="card-title text-center">Manage My Booking</h5>
-          <a href="#" class="stretched-link">
+          <a href="{%url 'manage_booking'%}" class="stretched-link">
           </a>
         </div>
         </div>
@@ -59,7 +59,7 @@
         <img src="{% static 'images/assept-document.svg'%}" class="card-img-top w-25" alt="..." style="margin: auto; padding: 1rem; width: 5rem;">
         <div class="card-body">
           <h5 class="card-title text-center">Check-in</h5>
-          <a href="#" class="stretched-link">
+          <a href="{%url 'check_in'%}" class="stretched-link">
           </a>
         </div>
         </div>

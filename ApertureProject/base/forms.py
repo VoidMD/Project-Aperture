@@ -19,13 +19,3 @@ class SignUpForm(UserCreationForm):
         # I've tried both of these 'fields' declaration, result is the same
         # fields = ('username', 'first_name', 'last_name', 'email', 'password1', 'password2', )
         fields = UserCreationForm.Meta.fields + ('first_name', 'last_name', 'email',)
-
-class SignUpPerson(ModelForm):
-
-    # Dob = forms.DateField()
-    # Phone_number = forms.CharField()
-    # address = forms.CharField()
-
-    class Meta():
-        model = Person
-        fields = '__all__'
