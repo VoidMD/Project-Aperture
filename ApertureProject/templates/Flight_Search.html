@@ -1,6 +1,7 @@
 {% extends 'main.html' %}
 
 {% load static %}
+{% load countries %}
 
 {% block content %}
 
@@ -19,7 +20,14 @@
 
                   <div class="col">
                     <div class="form-floating mb-4">
-                    <select class="form-select" id="floatingInput" name="country" >
+                        {% get_countries as countries %}
+
+                        <select class="form-select" id="floatingInput" name="country-from">
+                        {% for country in countries %}
+                        <option value="{{ country.code }}">{{ country.name }}</option>
+                        {% endfor %}
+                        </select>
+                    <!-- <select class="form-select" id="floatingInput" name="country-from" >
                         <option>country</option>
                         <option value="AFG">Afghanistan</option>
                         <option value="ALA">Aland Islands</option>
@@ -273,14 +281,21 @@
                         <option value="YEM">Yemen</option>
                         <option value="ZMB">Zambia</option>
                         <option value="ZWE">Zimbabwe</option>
-                            </select>          
+                            </select>           -->
                             <label for="floatingInput">From</label>
                     </div>
                   </div>
 
                   <div class="col">
                     <div class="form-floating mb-4">
-                        <select class="form-select" id="floatingInput" name="country">
+                        {% get_countries as countries %}
+
+                        <select class="form-select" id="floatingInput" name="country-to">
+                            {% for country in countries %}
+                            <option value="{{ country.code }}">{{ country.name }}</option>
+                            {% endfor %}
+                            </select>
+                        <!-- <select class="form-select" id="floatingInput" name="country-to">
                             <option>country</option>
                             <option value="AFG">Afghanistan</option>
                             <option value="ALA">Aland Islands</option>
@@ -534,7 +549,7 @@
                             <option value="YEM">Yemen</option>
                             <option value="ZMB">Zambia</option>
                             <option value="ZWE">Zimbabwe</option>
-                                </select>          
+                                </select>           -->
                                 <label for="floatingInput">To</label>
                         </div>
                   </div>
@@ -563,18 +578,7 @@
                 </div>        
         </div>
       
-        <!-- 2 column grid layout for inline styling -->
-        <div class="row mb-4">
-          <div class="col d-flex justify-content-center">
-            <!-- Checkbox -->
-            <div class="form-check">
-              <input class="form-check-input" type="checkbox" value="" id="form2Example31" checked />
-              <label class="form-check-label" for="form2Example31"> Remember me </label>
-            </div>
-          </div>
-    
-          
-        </div>
+        
       
         <!-- Submit button -->
         <div class="text-center my-4">
@@ -584,6 +588,31 @@
       </form>
   </div>
 
+  <!-- <div class="check-in">
+    <h4 class="display-6">flights</h4>
+
+    {% for flight in flights %}
+    <div class="check-in-list">
+       
+        <div class="container">
+            <div class="row">
+              <div class="col">
+                {{flight.Source_City}}
+                {{flight.Source_City.name}}
+              </div>
+              <div class="col">
+                {{flight.Destination_City}}
+                {{flight.Destination_City.name}}
+              </div>
+              <div class="col">
+                {{flight.Date}}
+              </div>
+            </div>
+         
+        </div>
+    </div>
+</div>
+{% endfor %} -->
 
 
 

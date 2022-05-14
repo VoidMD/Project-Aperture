@@ -10,5 +10,6 @@ urlpatterns = [
     path('FlightSearch/',views.flight_search, name="flight_search"),
     path('ManageBooking/',views.manage_booking, name="manage_booking"),
     path('CheckIn/',views.check_in, name="check_in"),
+    
 
 ]

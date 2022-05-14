@@ -10,19 +10,38 @@
         <h4 class="display-6">Your booked flights</h4>
         <div class="check-in-list">
            
-            <div class="container">
-                <div class="row">
-                  <div class="col">
-                    Column
-                  </div>
-                  <div class="col">
-                    Column
-                  </div>
-                  <div class="col">
-                    Column
-                  </div>
-                </div>
-             
+          <div class="container">
+            <div class="row">
+              <div class="col">
+                  From :
+                {{flight.Source_City}}
+                {{flight.Source_City.name}}
+              </div>
+
+              <div class="col">
+                  To :
+                {{flight.Destination_City}}
+                {{flight.Destination_City.name}}
+              </div>
+
+              <div class="col">
+                Duration:
+                {{flight.Flight_Duration}}
+                
+              </div>
+
+              <div class="col">
+                {{flight.Date}}
+                {{flight.flight_time}}
+              </div>
+
+              <div class="col">
+                Seat:
+                {{tkt.Seat_location}}
+                {{tkt.Seat_Number}}
+              </div>
+            </div>
+
             </div>
         </div>
     </div>
@@ -33,19 +52,38 @@
         <h4 class="display-6">Your checked-in flights</h4>
         <div class="check-in-list">
            
-            <div class="container">
-                <div class="row">
-                  <div class="col">
-                    Column
-                  </div>
-                  <div class="col">
-                    Column
-                  </div>
-                  <div class="col">
-                    Column
-                  </div>
-                </div>
-             
+          <div class="container">
+            <div class="row">
+              <div class="col">
+                  From :
+                {{flight.Source_City}}
+                {{flight.Source_City.name}}
+              </div>
+
+              <div class="col">
+                  To :
+                {{flight.Destination_City}}
+                {{flight.Destination_City.name}}
+              </div>
+
+              <div class="col">
+                Duration:
+                {{flight.Flight_Duration}}
+                
+              </div>
+
+              <div class="col">
+                {{flight.Date}}
+                {{flight.flight_time}}
+              </div>
+
+              <div class="col">
+                Seat:
+                {{tkt.Seat_location}}
+                {{tkt.Seat_Number}}
+              </div>
+            </div>
+
             </div>
         </div>
     </div>

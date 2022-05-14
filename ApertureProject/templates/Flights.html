@@ -1,0 +1,78 @@
+{% extends 'main.html' %}
+
+{% load static %}
+
+{% block content %}
+
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Booking flight</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <form action="" method="POST">
+      <div class="modal-body">
+        {{form.as_p}}
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="submit" class="btn btn-primary">Save changes</button>
+      </div>
+    </form>
+    </div>
+  </div>
+</div>
+
+  <div class="check-in">
+    <h4 class="display-6">flights</h4>
+    {% for flight in flights %}
+    <div class="check-in-list">
+       
+        <div class="container">
+            <div class="row">
+              <div class="col">
+                  From :
+                {{flight.Source_City}}
+                {{flight.Source_City.name}}
+              </div>
+
+              <div class="col">
+                  To :
+                {{flight.Destination_City}}
+                {{flight.Destination_City.name}}
+              </div>
+
+              <div class="col">
+                Duration:
+                {{flight.Flight_Duration}}
+                
+              </div>
+
+              <div class="col">
+                {{flight.Date}}
+                {{flight.flight_time}}
+              </div>
+
+              <div class="col">
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                  Book
+                </button>
+              </div>
+            </div>
+
+            </div>
+
+
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+
+
+{% endblock content %}
