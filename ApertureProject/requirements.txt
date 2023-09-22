@@ -1,2 +1,2 @@
-Django==4.2.5
+Django==3.2.21
 django_countries==7.5.1
